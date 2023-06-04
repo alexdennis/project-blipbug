@@ -2,11 +2,9 @@
   "name": "project-blipbug",
   "version": "1.0.0",
   "description": "An API to talk to Characters in a book",
-  "main": "src/main.ts",
   "scripts": {
-    "build": "tsc",
     "clean": "rm -rf dist",
-    "test": "jest"
+    "prettier:write": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "repository": {
     "type": "git",
