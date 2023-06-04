@@ -24,7 +24,8 @@
   "homepage": "https://github.com/alexdennis/project-blipbug#readme",
   "workspaces": [
     "packages/api",
-    "packages/api-schema"
+    "packages/api-schema",
+    "packages/infra"
   ],
   "devDependencies": {
     "prettier": "^2.5.1"
