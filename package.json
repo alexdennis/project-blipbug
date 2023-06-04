@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "An API to talk to Characters in a book",
   "scripts": {
-    "clean": "rm -rf dist && npm run clean --workspaces",
+    "clean": "rm -rf dist && npm run clean --workspace=packages/api",
     "build": "npm run build --workspace=packages/api",
     "build:infra": "npm run build --workspace=packages/infra",
     "test": "npm run test --workspace=packages/api-schema",
