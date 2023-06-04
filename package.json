@@ -5,8 +5,10 @@
   "scripts": {
     "clean": "rm -rf dist && npm run clean --workspaces",
     "build": "npm run build --workspace=packages/api",
+    "build:infra": "npm run build --workspace=packages/infra",
     "test": "npm run test --workspace=packages/api-schema",
     "start": "npm run start --workspace=packages/api",
+    "deploy": "npm run build:infra && npm run deploy --workspace=packages/infra",
     "prettier:write": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "repository": {
@@ -29,5 +31,8 @@
   ],
   "devDependencies": {
     "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "esbuild": "^0.17.19"
   }
 }

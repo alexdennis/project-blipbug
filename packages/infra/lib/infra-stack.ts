@@ -1,19 +1,27 @@
-import { Duration, Stack, StackProps } from 'aws-cdk-lib';
-import * as sns from 'aws-cdk-lib/aws-sns';
-import * as subs from 'aws-cdk-lib/aws-sns-subscriptions';
-import * as sqs from 'aws-cdk-lib/aws-sqs';
-import { Construct } from 'constructs';
+import { Stack, StackProps, Duration } from "aws-cdk-lib";
+import * as apigw from "aws-cdk-lib/aws-apigateway";
+import * as lambda from "aws-cdk-lib/aws-lambda";
+import { Construct } from "constructs";
+import * as path from "path";
 
 export class InfraStack extends Stack {
+  public readonly api: apigw.RestApi;
+  public readonly apiLambda: lambda.Function;
+
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const queue = new sqs.Queue(this, 'InfraQueue', {
-      visibilityTimeout: Duration.seconds(300)
+    this.apiLambda = new lambda.Function(this, "api-backend", {
+      runtime: lambda.Runtime.NODEJS_18_X,
+      memorySize: 3008,
+      timeout: Duration.seconds(10),
+      handler: "dist/index.handler",
+      code: lambda.Code.fromAsset(path.join(__dirname, "..", "..", "api")),
     });
 
-    const topic = new sns.Topic(this, 'InfraTopic');
-
-    topic.addSubscription(new subs.SqsSubscription(queue));
+    this.api = new apigw.LambdaRestApi(this, "blipbug-api", {
+      handler: this.apiLambda,
+      proxy: true,
+    });
   }
 }
