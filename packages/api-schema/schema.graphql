@@ -1,0 +1,7 @@
+type Query {
+  ask(book: String!, character: String!, question: String!): AskResult!
+}
+
+type AskResult {
+  answer: String!
+}

@@ -1,5 +1,5 @@
 {
-  "name": "project-blipbug",
+  "name": "@project-blipbug/api",
   "version": "1.0.0",
   "description": "An API to talk to Characters in a book",
   "main": "src/main.ts",

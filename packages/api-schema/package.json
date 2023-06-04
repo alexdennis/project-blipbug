@@ -1,0 +1,15 @@
+{
+  "name": "@project-blipbug/api-schema",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "graphql": "^16.2.0",
+    "graphql-tag": "^2.12.6"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "",
+  "license": "ISC"
+}
