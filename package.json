@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "An API to talk to Characters in a book",
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist && npm run clean --workspaces",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
     "prettier:write": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "repository": {
