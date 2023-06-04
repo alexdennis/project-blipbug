@@ -10,7 +10,7 @@ export const ask = async (
   book: string,
   character: string,
   question: string
-) => {
+): Promise<string | undefined> => {
   console.info({ book, character, question });
   const llmChain = createChain();
   const res = await llmChain.call({
@@ -22,9 +22,13 @@ export const ask = async (
 
   if (res.error) {
     console.error(res.error);
+    throw new Error(res.error);
   } else if (res.text) {
     console.log(res.text);
+    return res.text;
   }
+
+  return undefined;
 };
 
 /**

@@ -1,5 +1,18 @@
-import { ask } from "./lib/ask";
+import { ApolloServer, gql } from "apollo-server";
+const { schema } = require("@project-blipbug/api-schema");
+
+import { resolvers } from "./resolvers";
 
 // Import the .env file
 require("dotenv").config();
-ask("The Bible", "Jesus", "What is the meaning of life?");
+
+const typeDefs = gql(schema.idl);
+
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
+
+server.listen().then(({ url }) => {
+  console.log(`🚀 Server ready at ${url}`);
+});
