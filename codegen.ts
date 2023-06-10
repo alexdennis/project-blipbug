@@ -5,9 +5,12 @@ const config: CodegenConfig = {
   schema: "packages/api-schema/schema.graphql",
   documents: "packages/ui/src/graphql",
   generates: {
-    "packages/ui/src/types/": {
+    "packages/ui/src/types/codegen/": {
       preset: "client",
       plugins: [],
+      presetConfig: {
+        gqlTagName: "gql",
+      },
     },
     "./graphql.schema.json": {
       plugins: ["introspection"],

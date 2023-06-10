@@ -1,3 +1,1 @@
-fragment-masking.ts
-gql.ts
-graphql.ts
+codegen/*

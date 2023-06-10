@@ -1,30 +1,60 @@
 [
-    {
-      "name": "The Bible",
-      "characters": [
-        {"name": "Jesus", "description": "The son of God"},
-        {"name": "Moses", "description": "The guy who parted the Red Sea"},
-        {"name": "Abraham", "description": "The guy who almost sacrificed his son"},
-        {"name": "Paul", "description": "The guy who wrote most of the New Testament"},
-        {"name": "Peter", "description": "The guy who denied Jesus three times"},
-        {"name": "John", "description": "The guy who wrote the book of Revelation"},
-        {"name": "Isaac", "description": "The guy who was almost sacrificed by his father"},
-        {"name": "Jacob", "description": "The guy who wrestled with God"},
-        {"name": "Ruth", "description": "The woman who was loyal to her mother-in-law"},
-        {"name": "Esther", "description": "The woman who saved her people"},
-        {"name": "Mary", "description": "The mother of Jesus"},
-        {"name": "Joseph", "description": "The dreamer"}
-      ]
-    },
-    {
-      "name": "The Adventures of Alice in Wonderland",
-      "characters": [
-        {"name": "Alice", "description": "The main character" },
-        {"name": "The Mad Hatter", "description": "" },
-        {"name": "The Queen of Hearts", "description": "The ruler of Wonderland" },
-        {"name": "The Cheshire Cat", "description": "The cat that can disappear" },
-        {"name": "The White Rabbit", "description": "The rabbit that is always late" },      
-        {"name": "The Caterpillar", "description": "The caterpillar that smokes a hookah" }
-      ]
-    }
-  ]
+  {
+    "name": "The Bible",
+    "characters": [
+      { "name": "Jesus", "description": "The son of God" },
+      { "name": "Moses", "description": "The guy who parted the Red Sea" },
+      {
+        "name": "Abraham",
+        "description": "The guy who almost sacrificed his son"
+      },
+      {
+        "name": "Paul",
+        "description": "The guy who wrote most of the New Testament"
+      },
+      {
+        "name": "Peter",
+        "description": "The guy who denied Jesus three times"
+      },
+      {
+        "name": "John",
+        "description": "The guy who wrote the book of Revelation"
+      },
+      {
+        "name": "Isaac",
+        "description": "The guy who was almost sacrificed by his father"
+      },
+      { "name": "Jacob", "description": "The guy who wrestled with God" },
+      {
+        "name": "Ruth",
+        "description": "The woman who was loyal to her mother-in-law"
+      },
+      { "name": "Esther", "description": "The woman who saved her people" },
+      { "name": "Mary", "description": "The mother of Jesus" },
+      { "name": "Joseph", "description": "The dreamer" }
+    ]
+  },
+  {
+    "name": "The Adventures of Alice in Wonderland",
+    "characters": [
+      { "name": "Alice", "description": "The main character" },
+      { "name": "The Mad Hatter", "description": "" },
+      {
+        "name": "The Queen of Hearts",
+        "description": "The ruler of Wonderland"
+      },
+      {
+        "name": "The Cheshire Cat",
+        "description": "The cat that can disappear"
+      },
+      {
+        "name": "The White Rabbit",
+        "description": "The rabbit that is always late"
+      },
+      {
+        "name": "The Caterpillar",
+        "description": "The caterpillar that smokes a hookah"
+      }
+    ]
+  }
+]
