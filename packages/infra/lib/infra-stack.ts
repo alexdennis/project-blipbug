@@ -34,13 +34,15 @@ export class InfraStack extends Stack {
     this.apiLambda = new lambda.Function(this, "api-backend", {
       runtime: lambda.Runtime.NODEJS_18_X,
       memorySize: 3008,
-      timeout: Duration.seconds(10),
+      timeout: Duration.seconds(60),
       handler: "dist/index.handler",
       code: lambda.Code.fromAsset(path.join(__dirname, "..", "..", "api")),
       environment: {
         DATABASE_TABLE_NAME: this.datbaseTable.tableName,
       },
     });
+
+    this.datbaseTable.grantReadWriteData(this.apiLambda);
 
     this.api = new apigw.LambdaRestApi(this, "blipbug-api", {
       handler: this.apiLambda,

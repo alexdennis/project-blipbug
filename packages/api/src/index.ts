@@ -15,7 +15,8 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: {
-    database: new DynamoDBClient({}),
+    database: new DynamoDBClient({ region: process.env.AWS_REGION }),
+    tableName: process.env.DATABASE_TABLE_NAME,
   },
 
   // By default, the GraphQL Playground interface and GraphQL introspection
