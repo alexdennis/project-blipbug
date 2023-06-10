@@ -9,7 +9,8 @@
     "test": "npm run test --workspace=packages/api-schema",
     "start": "npm run start --workspace=packages/api",
     "deploy": "npm run build:infra && npm run deploy --workspace=packages/infra",
-    "prettier:write": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
+    "prettier:write": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "repository": {
     "type": "git",
@@ -31,7 +32,10 @@
     "packages/ui"
   ],
   "devDependencies": {
-    "prettier": "^2.5.1"
+    "@graphql-codegen/cli": "4.0.1",
+    "prettier": "^2.5.1",
+    "@graphql-codegen/introspection": "4.0.0",
+    "@graphql-codegen/client-preset": "4.0.0"
   },
   "dependencies": {
     "esbuild": "^0.17.19"

@@ -1,0 +1,5 @@
+query Ask($book: String!, $character: String!, $question: String!) {
+  ask(book: $book, character: $character, question: $question) {
+    answer
+  }
+}
