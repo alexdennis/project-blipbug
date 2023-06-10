@@ -1,5 +1,7 @@
 import { ApolloServer, gql } from "apollo-server-lambda";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+
 const { schema } = require("@project-blipbug/api-schema");
 
 import { resolvers } from "./resolvers";
@@ -12,6 +14,9 @@ const typeDefs = gql(schema.idl);
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: {
+    database: new DynamoDBClient({}),
+  },
 
   // By default, the GraphQL Playground interface and GraphQL introspection
   // is disabled in "production" (i.e. when `process.env.NODE_ENV` is `production`).
