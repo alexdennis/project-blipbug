@@ -32,13 +32,7 @@ const AskQuestion: React.FC = () => {
   );
   const [selectedQuestion, setQuestion] = React.useState("");
 
-  const [ask, { loading, error, data }] = useLazyQuery(ASK, {
-    variables: {
-      book: selectedBook,
-      character: selectedCharacter,
-      question: selectedQuestion,
-    },
-  });
+  const [ask, { loading, error, data }] = useLazyQuery(ASK);
 
   React.useEffect(() => {
     setCharacter(books[bookMap.get(selectedBook) ?? 0].characters[0].name);
@@ -46,7 +40,13 @@ const AskQuestion: React.FC = () => {
 
   function handleSubmit(ev: React.FormEvent<HTMLFormElement>) {
     ev.preventDefault();
-    ask();
+    ask({
+      variables: {
+        book: selectedBook,
+        character: selectedCharacter,
+        question: selectedQuestion,
+      },
+    });
   }
 
   return (
