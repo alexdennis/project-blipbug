@@ -4,7 +4,7 @@
   "description": "An API to talk to Characters in a book",
   "scripts": {
     "clean": "rm -rf dist && npm run clean --workspace=packages/api",
-    "build": "npm run build --workspace=packages/api",
+    "build": "npm run build --workspace=packages/api && npm run build --workspace=packages/ui",
     "build:infra": "npm run build --workspace=packages/infra",
     "test": "npm run test --workspace=packages/api-schema",
     "start": "npm run start --workspace=packages/api",
@@ -27,7 +27,8 @@
   "workspaces": [
     "packages/api",
     "packages/api-schema",
-    "packages/infra"
+    "packages/infra",
+    "packages/ui"
   ],
   "devDependencies": {
     "prettier": "^2.5.1"

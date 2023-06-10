@@ -5,7 +5,7 @@
   "main": "src/main.ts",
   "scripts": {
     "build": "esbuild src/index.ts --bundle --platform=node --target=node18 --outfile=dist/index.js && npm run copy-schema",
-    "copy-schema": "cp ../api-schema/schema.graphql dist/schema.graphql && cp ../api-schema/schema.graphql schema.graphql",
+    "copy-schema": "cp ../api-schema/schema.graphql ./dist/schema.graphql && cp ../api-schema/schema.graphql ./schema.graphql",
     "clean": "rm -rf dist schema.graphql",
     "start": "nodemon src/main.ts",
     "test": "jest"

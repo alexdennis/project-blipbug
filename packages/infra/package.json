@@ -22,6 +22,7 @@
     "typescript": "~5.0.4"
   },
   "dependencies": {
+    "@project-blipbug/ui": "*",
     "aws-cdk-lib": "2.82.0",
     "constructs": "^10.0.0"
   }
