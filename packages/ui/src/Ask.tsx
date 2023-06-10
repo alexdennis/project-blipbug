@@ -34,10 +34,18 @@ const AskQuestion: React.FC = () => {
 
   const [ask, { loading, error, data }] = useLazyQuery(ASK);
 
+  // When the book changes, change the character to the first character in the book
   React.useEffect(() => {
-    setCharacter(books[bookMap.get(selectedBook) ?? 0].characters[0].name);
+    changeCharacter(books[bookMap.get(selectedBook) ?? 0].characters[0].name);
   }, [selectedBook]);
 
+  // When the character changes, clear the question
+  function changeCharacter(character: string) {
+    setCharacter(character);
+    setQuestion("");
+  }
+
+  // When the form is submitted, ask the question to the API
   function handleSubmit(ev: React.FormEvent<HTMLFormElement>) {
     ev.preventDefault();
     ask({
@@ -63,7 +71,7 @@ const AskQuestion: React.FC = () => {
         </Select>
         <Select
           value={selectedCharacter}
-          onChange={(ev) => setCharacter(ev.target.value)}
+          onChange={(ev) => changeCharacter(ev.target.value)}
           fullWidth
         >
           {books[bookMap.get(selectedBook) ?? 0].characters.map(
