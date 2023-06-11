@@ -3,3 +3,4 @@ dist
 packages/**/node_modules
 packages/**/dist
 packages/infra/cdk.out/
+build
