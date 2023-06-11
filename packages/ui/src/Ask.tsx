@@ -87,6 +87,7 @@ const AskQuestion: React.FC = () => {
         </Select>
         <TextField
           placeholder="Ask a question"
+          value={selectedQuestion}
           rows={5}
           multiline
           onChange={(ev) => setQuestion(ev.target.value)}

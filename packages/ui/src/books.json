@@ -30,9 +30,10 @@
         "description": "The woman who was loyal to her mother-in-law"
       },
       { "name": "Esther", "description": "The woman who saved her people" },
-      { "name": "Mary", "description": "The mother of Jesus" },
-      { "name": "Joseph", "description": "The dreamer" },
-      { "name": "David", "description": "The boy turned king" }
+      { "name": "Mary, mother of Jesus", "description": "The mother of Jesus" },
+      { "name": "Joseph, the son of Jacob", "description": "The dreamer" },
+      { "name": "David", "description": "The boy turned king" },
+      { "name": "Solomon", "description": "The son of David"}
     ]
   },
   {
@@ -56,6 +57,12 @@
         "name": "The Caterpillar",
         "description": "The caterpillar that smokes a hookah"
       }
+    ]
+  },
+  {
+    "name": "The Lord of the Rings",
+    "characters":[
+        {"name": "Frodo", "description": "The hobbit that destroyed the one ring"}
     ]
   }
 ]
