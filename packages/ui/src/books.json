@@ -33,7 +33,9 @@
       { "name": "Mary, mother of Jesus", "description": "The mother of Jesus" },
       { "name": "Joseph, the son of Jacob", "description": "The dreamer" },
       { "name": "David", "description": "The boy turned king" },
-      { "name": "Solomon", "description": "The son of David" }
+      { "name": "Solomon", "description": "The son of David" },
+      { "name": "Job", "description": "The guy who was very patient" },
+      { "name": "Jabez", "description": "Blessed by God" }
     ]
   },
   {
@@ -68,6 +70,77 @@
       },
       { "name": "Samwise", "description": "Frodos best friend" },
       { "name": "Gandalf", "description": "The wizard" }
+    ]
+  },
+  {
+    "name": "The Wonderful Wizard of Oz",
+    "characters": [
+      { "name": "Dorothy", "description": "" },
+      { "name": "Scarecrow", "description": "" },
+      { "name": "Tin Man", "description": "" },
+      { "name": "Lion", "description": "" }
+    ]
+  },
+  {
+    "name": "The Chronicles of Narnia",
+    "characters": [
+      { "name": "Aslan", "description": "" },
+      { "name": "Lucy", "description": "" },
+      { "name": "Edmund", "description": "" },
+      { "name": "Peter", "description": "" },
+      { "name": "Susan", "description": "" }
+    ]
+  },
+  {
+    "name": "The Hunger Games",
+    "characters": [
+      { "name": "Katniss", "description": "" },
+      { "name": "Peeta", "description": "" },
+      { "name": "Gale", "description": "" },
+      { "name": "Haymitch", "description": "" },
+      { "name": "Primrose", "description": "" },
+      { "name": "Effie", "description": "" },
+      { "name": "Cinna", "description": "" },
+      { "name": "President Snow", "description": "" },
+      { "name": "President Coin", "description": "" },
+      { "name": "Finnick", "description": "" },
+      { "name": "Johanna", "description": "" },
+      { "name": "Beetee", "description": "" },
+      { "name": "Wiress", "description": "" },
+      { "name": "Plutarch", "description": "" },
+      { "name": "Boggs", "description": "" },
+      { "name": "Cressida", "description": "" },
+      { "name": "Castor", "description": "" },
+      { "name": "Pollux", "description": "" },
+      { "name": "Messalla", "description": "" },
+      { "name": "Tigris", "description": "" },
+      { "name": "Caesar", "description": "" },
+      { "name": "Claudius", "description": "" },
+      { "name": "Cato", "description": "" },
+      { "name": "Clove", "description": "" },
+      { "name": "Foxface", "description": "" },
+      { "name": "Thresh", "description": "" },
+      { "name": "Rue", "description": "" },
+      { "name": "Glimmer", "description": "" },
+      { "name": "Marvel", "description": "" },
+      { "name": "Cashmere", "description": "" },
+      { "name": "Gloss", "description": "" },
+      { "name": "Enobaria", "description": "" },
+      { "name": "Brutus", "description": "" },
+      { "name": "Mags", "description": "" },
+      { "name": "Wiress", "description": "" },
+      { "name": "Beetee", "description": "" },
+      { "name": "Finnick", "description": "" },
+      { "name": "Johanna", "description": "" },
+      { "name": "Annie", "description": "" }
+    ]
+  },
+  {
+    "name": "Harry Potter series",
+    "characters": [
+      { "name": "Harry Potter", "description": "" },
+      { "name": "Hermoine Granger", "description": "" },
+      { "name": "Ron Weasley", "description": "" }
     ]
   }
 ]

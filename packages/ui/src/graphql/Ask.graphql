@@ -1,5 +1,15 @@
-query Ask($book: String!, $character: String!, $question: String!) {
-  ask(book: $book, character: $character, question: $question) {
+query Ask(
+  $book: String!
+  $character: String!
+  $question: String!
+  $audience: String
+) {
+  ask(
+    book: $book
+    character: $character
+    question: $question
+    audience: $audience
+  ) {
     answer
   }
 }
