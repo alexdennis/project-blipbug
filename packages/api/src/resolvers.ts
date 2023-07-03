@@ -10,11 +10,25 @@ export const resolvers = {
         book,
         character,
         question,
-      }: { book: string; character: string; question: string },
+        audience,
+      }: {
+        book: string;
+        character: string;
+        question: string;
+        audience?: string;
+      },
       { database, tableName }: { database: DynamoDBClient; tableName: string }
     ) => {
-      const answer = await ask(book, character, question);
-      await logToDB(database, tableName, book, character, question, answer);
+      const answer = await ask(book, character, question, audience);
+      await logToDB(
+        database,
+        tableName,
+        book,
+        character,
+        question,
+        audience,
+        answer
+      );
       return {
         answer,
       };
@@ -28,6 +42,7 @@ async function logToDB(
   book: string,
   character: string,
   question: string,
+  audience: string | undefined,
   answer: string | undefined
 ) {
   const params = {
@@ -38,6 +53,7 @@ async function logToDB(
       book: { S: book },
       character: { S: character },
       question: { S: question },
+      audience: { S: audience ?? "" },
       answer: { S: JSON.stringify(answer) },
     },
   };

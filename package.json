@@ -8,6 +8,7 @@
     "build:infra": "npm run build --workspace=packages/infra",
     "test": "npm run test --workspace=packages/api-schema",
     "start": "npm run start --workspace=packages/api",
+    "start:ui": "npm run start --workspace=packages/ui",
     "deploy": "npm run build:infra && npm run deploy --workspace=packages/infra",
     "prettier:write": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "codegen": "graphql-codegen --config codegen.ts"

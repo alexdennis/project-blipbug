@@ -9,7 +9,8 @@ const { ChatOpenAI } = require("langchain/chat_models/openai");
 export const ask = async (
   book: string,
   character: string,
-  question: string
+  question: string,
+  audience?: string
 ): Promise<string | undefined> => {
   console.info({ book, character, question });
   const llmChain = createChain();
@@ -17,6 +18,7 @@ export const ask = async (
     character,
     book,
     question,
+    audience: audience ?? "a Human Being",
   });
   console.info({ res });
 
@@ -43,7 +45,7 @@ function createChain(temperature: number = 0) {
     SystemMessagePromptTemplate.fromTemplate(
       `You are a chatbot designed to give users the ability to talk to characters in any book. Play the role of {character} in the {book}.  
     Don't break out of character. Please give chapter and verse numbers that validate your answers where possible. Don't refer to yourself in the third person.
-    Respond in less than 500 words and avoid repetition.`
+    Respond in less than 500 words and avoid repetition. Answer as if I am {audience}.`
     ),
     HumanMessagePromptTemplate.fromTemplate("{question}"),
   ]);

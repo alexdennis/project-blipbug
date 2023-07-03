@@ -4,7 +4,7 @@ const validate = require("../").validate;
 
 const goodQuery = validate(`
 {
-  ask(book: "The Bible", character: "Jesus", question: "What is the meaning of life?") {
+  ask(book: "The Bible", character: "Jesus", question: "What is the meaning of life?", "audience": "everyone") {
     answer
   }
 }

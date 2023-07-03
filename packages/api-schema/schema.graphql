@@ -1,5 +1,10 @@
 type Query {
-  ask(book: String!, character: String!, question: String!): AskResult!
+  ask(
+    book: String!
+    character: String!
+    question: String!
+    audience: String
+  ): AskResult!
 }
 
 type AskResult {
